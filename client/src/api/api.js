@@ -7,4 +7,3 @@ const api = axios.create({
     withCredentials: true
 });
 
-export const testPasswordStrength = async (password) => await api.post('/password/check', { password });

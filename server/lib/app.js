@@ -6,8 +6,7 @@ const helmet = require('helmet');
 const compression = require('compression');
 const errorConverter = require('./middlewares/error.converter');
 const errorMiddleware = require('./middlewares/error.middleware');
-const passwordRouter = require('./resources/products/products.router');
-const absolutDiffRouter = require('./resources/absoluteDiff/absoluteDiff.router');
+const productsRouter = require('./resources/products/products.router');
 const handleNotFound = require('./utils/exceptions/handleNotFound');
 
 function initiliaseMiddlewares() {
@@ -20,7 +19,7 @@ function initiliaseMiddlewares() {
 }
 
 function initiliaseRouters() {
-    app.use('/api/products', passwordRouter);
+    app.use('/api/products', productsRouter);
 };
 
 function initliaseErrorHandlers() {
