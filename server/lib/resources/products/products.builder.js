@@ -1,75 +1,18 @@
-class PasswordChecker {
-    constructor(password) {
-        this.password = password;
-        this.missingTypes = 3;
-        this.missingChar = 0;
-        this.changes = 0;
-        this.oneRepeating = 0;
+class ProductBuilder {
+    constructor(product) {
+        this.product = product;
     }
 
-    validate() {
-        if (!this.password || typeof this.password !== 'string') {
-            throw new Error('Invalid password');
-        }
-
-        this.checkMissingTypes();
-        this.checkRepeatingCharacters();
-        this.calculateChanges();
-
-
-        return this;
-    }
-
-
-    checkMissingTypes() {
-        if (/[a-z]/.test(this.password)) this.missingTypes--;
-        if (/[A-Z]/.test(this.password)) this.missingTypes--;
-        if (/\d/.test(this.password)) this.missingTypes--;
-    }
-
-    checkRepeatingCharacters() {
-        for (let i = 2; i < this.password.length; i++) {
-            if (
-                this.password[i] === this.password[i - 1] &&
-                this.password[i] === this.password[i - 2]
-            ) {
-                let count = 2;
-                while (
-                    i < this.password.length &&
-                    this.password[i] === this.password[i - 1]
-                ) {
-                    count++;
-                    i++;
-                }
-                this.oneRepeating += Math.floor(count / 3);
-            }
-        }
-    }
-
-    calculateChanges() {
-        if (this.password.length < 6) {
-            this.missingChar += Math.max(6 - this.password.length, this.missingTypes);
-        }
-        else {
-            let overLength = Math.max(this.password.length - 20, 0);
-            this.missingChar -= overLength;
-
-            let leftOverRepeating = Math.max(
-                this.oneRepeating - overLength,
-                0
-            );
-            this.changes += Math.floor((leftOverRepeating + 1) / 2);
-        }
-    }
-
-    getResult() {
-        if (this.missingChar >= this.missingTypes) {
-            return this.missingChar + this.oneRepeating
-        }
-        else {
-            return Math.abs(this.missingChar) + this.missingTypes
-        }
+    validate() {    
+        if(!this.product) throw 'Product not valid';
+        if(!this.product?.name || this.product?.name?.length < 5) throw 'Product name should be greater than 5';
+        if(!this.product?.category || this.product?.category?.length <= 3) throw 'Product category should be greater than 3';
+        if(!this.product?.description || this.product?.description?.length <= 20) throw 'Product description should be greater than 20';
+        if(!this.product?.short_description || this.product?.short_description?.length <= 12) throw 'Product short_description should be greater than 12';
+        if(!this.product?.seller || this.product?.seller?.length < 4) throw 'Product seller name should be greater than 3';
+        if(!this.product?.price || isNaN(this.product?.price) || this.product <= 100 ) throw 'Product price should be greater than 100';
+        return this.product;
     }
 }
 
-module.exports = PasswordChecker
+module.exports = ProductBuilder

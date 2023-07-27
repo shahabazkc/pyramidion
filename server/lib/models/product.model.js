@@ -1,22 +1,15 @@
 const mongoose = require('mongoose');
 
-const resultSchema = new mongoose.Schema({
-    mode: {
-        type: String,
-        enum: ['absolutDiff', 'password'],
-        required: true
-    },
-    input: {
-        type: String,
-        required: true
-    },
-    output: {
-        type: String,
-        required: true
-    },
+const productSchema = new mongoose.Schema({
+    name: { type: String, required: true, index: true },
+    category: { type: String, required: true, index: true },
+    description: { type: String, default: '' },
+    price: { type: Number, required: true },
+    short_description: { type: String, required: true, default: '' },
+    seller: { type: String, required: true, index: true }
 }, {
     timestamps: true
-})
+});
 
-module.exports =  new mongoose.model('result', resultSchema);
+module.exports = new mongoose.model('products', productSchema);
 
