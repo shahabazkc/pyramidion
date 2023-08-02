@@ -7,3 +7,7 @@ const api = axios.create({
     withCredentials: true
 });
 
+
+
+export const getProducts = async () => await api.get('/products');
+export const getProductData = async (id) => await api.get(`/products/${id}`);
