@@ -8,6 +8,6 @@ const api = axios.create({
 });
 
 
-
 export const getProducts = async () => await api.get('/products');
 export const getProductData = async (id) => await api.get(`/products/${id}`);
+export const createProduct = async (productData) => await api.post('/products', productData);

@@ -1,4 +1,5 @@
 import {
+    createProduct,
     getProductData,
     getProducts
 } from '../../api/api';
@@ -29,3 +30,15 @@ export const getProductDetailsAsync = createAsyncThunk(
     }
 );
 
+
+export const createProductAsync = createAsyncThunk(
+    'product/createProduct',
+    async (productData) => {
+        try {
+            const { data } = await createProduct(productData);
+            return data;
+        } catch (err) {
+            throw err?.response?.data;
+        }
+    }
+); 

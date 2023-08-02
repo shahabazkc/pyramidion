@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import {
+    createProductAsync,
     getAllProductsAsync,
     getProductDetailsAsync
 } from '../api/product';
@@ -26,6 +27,10 @@ export const productSlice = createSlice({
                 state.productData[action?.payload?.data?._id] = action.payload?.data;
             })
             .addCase(getProductDetailsAsync.rejected, (state) => { })
+            .addCase(createProductAsync.fulfilled, (state, action) => {
+                state.products.push(action.payload?.data)
+            })
+            .addCase(createProductAsync.rejected, (state) => { })
     },
 });
 
