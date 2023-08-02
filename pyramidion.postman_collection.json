@@ -1,0 +1,428 @@
+{
+	"info": {
+		"_postman_id": "42e93af8-3b6e-40e5-bd25-87c4bb51c57c",
+		"name": "pyramidion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25924191"
+	},
+	"item": [
+		{
+			"name": "create product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"LuxeSeat Chair\",\r\n    \"category\": \"Home Furniture\",\r\n    \"description\": \"Experience ultimate comfort and support with the ErgoBliss Chair. Designed with cutting-edge ergonomic technology, this chair provides optimal lumbar support and promotes a healthy sitting posture. Its plush memory foam cushioning adapts to your body shape, ensuring a cozy seating experience during long hours of work or relaxation. The sleek and modern design of the chair complements any interior decor, making it a perfect addition to your home or office. Upgrade your seating comfort with the ErgoBliss Chair today!\",\r\n    \"short_description\": \"Revolutionary Comfort\",\r\n    \"seller\": \"Amit Traders\",\r\n    \"price\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/api/products",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"LuxeSeat Chair\",\r\n    \"category\": \"Home Furniture\",\r\n    \"description\": \"Experience ultimate comfort and support with the ErgoBliss Chair. Designed with cutting-edge ergonomic technology, this chair provides optimal lumbar support and promotes a healthy sitting posture. Its plush memory foam cushioning adapts to your body shape, ensuring a cozy seating experience during long hours of work or relaxation. The sleek and modern design of the chair complements any interior decor, making it a perfect addition to your home or office. Upgrade your seating comfort with the ErgoBliss Chair today!\",\r\n    \"short_description\": \"Revolutionary Comfort\",\r\n    \"seller\": \"Amit Traders\",\r\n    \"price\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/products",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "851"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"353-dU57NAa98EFAEnNMnAdJD8z/SRM\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Jul 2023 08:49:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"mesage\": \"product created Succesfully\",\n    \"data\": {\n        \"name\": \"LuxeSeat Chair\",\n        \"category\": \"Home Furniture\",\n        \"description\": \"Experience ultimate comfort and support with the ErgoBliss Chair. Designed with cutting-edge ergonomic technology, this chair provides optimal lumbar support and promotes a healthy sitting posture. Its plush memory foam cushioning adapts to your body shape, ensuring a cozy seating experience during long hours of work or relaxation. The sleek and modern design of the chair complements any interior decor, making it a perfect addition to your home or office. Upgrade your seating comfort with the ErgoBliss Chair today!\",\n        \"price\": 100,\n        \"short_description\": \"Revolutionary Comfort\",\n        \"seller\": \"Amit Traders\",\n        \"_id\": \"64c22f808527d909998e2da5\",\n        \"createdAt\": \"2023-07-27T08:49:04.388Z\",\n        \"updatedAt\": \"2023-07-27T08:49:04.388Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/products/",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/products/",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "167"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a7-/PDRa222JJrxBqwhl1lVgTE1420\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Jul 2023 08:56:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"data\": [\n        {\n            \"_id\": \"64c22f808527d909998e2da5\",\n            \"name\": \"LuxeSeat Chair\",\n            \"category\": \"Home Furniture\",\n            \"price\": 100,\n            \"short_description\": \"Revolutionary Comfort\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "get product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/products/64c22f808527d909998e2da5",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"64c22f808527d909998e2da5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/products/64c22f808527d909998e2da5",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"64c22f808527d909998e2da5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "812"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"32c-QZnuSWmpE78aUbut75SC/R+2iAw\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Jul 2023 08:57:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"data\": {\n        \"_id\": \"64c22f808527d909998e2da5\",\n        \"name\": \"LuxeSeat Chair\",\n        \"category\": \"Home Furniture\",\n        \"description\": \"Experience ultimate comfort and support with the ErgoBliss Chair. Designed with cutting-edge ergonomic technology, this chair provides optimal lumbar support and promotes a healthy sitting posture. Its plush memory foam cushioning adapts to your body shape, ensuring a cozy seating experience during long hours of work or relaxation. The sleek and modern design of the chair complements any interior decor, making it a perfect addition to your home or office. Upgrade your seating comfort with the ErgoBliss Chair today!\",\n        \"price\": 100,\n        \"short_description\": \"Revolutionary Comfort\",\n        \"seller\": \"Amit Traders\",\n        \"createdAt\": \"2023-07-27T08:49:04.388Z\",\n        \"updatedAt\": \"2023-07-27T08:49:04.388Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}

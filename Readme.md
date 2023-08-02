@@ -1,6 +1,6 @@
-# Ippopay Password Strength Checker
+# Pyramidion Assignment
 
-This is a Node.js and React.js application that checks the strength of a password by making a POST request to the `/api/password/check` endpoint.
+The Pyramidion Blogging Platform enables users to create, view, and explore a dynamic collection of blogs.
 
 ## Prerequisites
 
@@ -8,12 +8,12 @@ This is a Node.js and React.js application that checks the strength of a passwor
 - Docker (optional, for containerized deployment)
 
 ## Notes
-  - You can import collection to postman from the file `ippopay.postman_collection.json`
+  - You can import collection to postman from the file `pyramidion.postman_collection.json`
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/shahabazkc/ippopay.git`
-2. Rename the `.env.example` file to `.env` from server directory.
+1. Clone the repository: `git clone https://github.com/shahabazkc/pyramidion.git`
+2. Rename the `.env.example` file to `.env` from server directory. (You can use MONGO_URI="mongodb://db:27017/pyramidion" for running in docker)
 3. Install the dependencies from server and client directory (For running server without docker. If you are using docker you can skip this step) 
 ```bash
    npm install
@@ -42,4 +42,6 @@ To run the server in development mode with automatic restart on file changes, us
 
 List the available API endpoints and provide a brief description for each:
 
-- `POST /api/password/check` - This endpoint is used for checking password strength it will return number of steps required to make it strong. Also it will store the result in the db
+- `POST /api/products/` - This endpoint is used for Creating a product
+- `GET /api/products/` - This endpoint is used to get all the products
+- `GET /api/products/:id` - This endpint is used to get a product
